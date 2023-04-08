@@ -1,0 +1,48 @@
+<p>app component works</p>
+
+<!-- Single Slot -->
+<app-child>
+  <h1>Data passed from parent component</h1><br>
+  <input type="text" (input)="onInputChange($event)" placeHolder="Search" />
+</app-child>
+
+<!-- Multi Slot projection -->
+<!-- select by id -->
+ <app-child>
+  <h1 id="header1">H1  multiSlot</h1><br>
+</app-child>
+
+<app-child>
+  <h2 id="header2">H2  multiSlot</h2><br>
+</app-child>
+
+<app-child>
+  <h3 id="header3">H3 multiSlot</h3><br>
+</app-child>
+
+<!-- select by class name -->
+<app-child>
+  <h1 class="header1">H1  multiSlot</h1><br>
+</app-child>
+
+<app-child>
+  <h2 class="header2">H2  multiSlot</h2><br>
+</app-child>
+
+<app-child>
+  <h3 class="header3">H3 multiSlot</h3><br>
+</app-child>
+
+<!-- Conditional content projection -->
+<div *ngIf="isLoggedIn; else loggedOut">
+  Welcome back.
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>
+
+<!-- Conditional with ngProjectAs -->
+<app-child >
+  <p heading>Project content with angular</p>
+</app-child>

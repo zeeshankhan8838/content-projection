@@ -1,0 +1,24 @@
+<p>child works!</p>
+
+<!-- single slot projection -->
+<ng-content></ng-content>
+
+<!-- Multi slot projection -->
+
+<!-- select by class -->
+<ng-content select="h1"></ng-content>
+<ng-content select="h2"></ng-content>
+
+<!-- select by id -->
+<ng-content select="#header1"></ng-content>
+<ng-content select="#header2"></ng-content>
+
+
+<!-- select by class -->
+<ng-content select=".header1"></ng-content>
+<ng-content select=".header3"></ng-content>
+
+<!-- ngProjectAs -->
+<ng-container ngProjectAs="[heading]">
+  <p>Content projection with conditional environment </p>
+</ng-container>
